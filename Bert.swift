@@ -135,7 +135,7 @@ class Bert {
     }
 
     class func getObjectClassName(object: BertObject) -> String {
-        let className = NSStringFromClass(object_getClass(object) as AnyClass)
+        let className = NSStringFromClass(object_getClass(object) as! AnyClass)
         let classNameArr = className.components(separatedBy: ".")
 
         return classNameArr.last!
